@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="PropertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location"
+                  value="classpath:magento-api.properties"/>
+    </bean>
+
+
+    <bean id="soapConfig" class="com.google.code.magja.soap.SoapConfig">
+        <property name="apiUser" value="${magento-api-username}"/>
+        <property name="apiKey" value="${magento-api-password}"/>
+        <property name="remoteHost" value="${magento-api-url}"/>
+        <property name="defaultAttributeSetId" value="${default-attribute-set-id}"/>
+        <property name="defaultRootCategoryId" value="${default-root-category-id}"/>
+    </bean>
+
+</beans>
