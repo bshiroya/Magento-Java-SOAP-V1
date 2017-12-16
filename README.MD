@@ -184,28 +184,6 @@ Reading the Customers
 
     List<Customer> customers = remoteServiceFactory.customerRemoteService.list();
 
-## Development notes
 
-Development snapshots will be deployed periodically from Jenkins CI provided by [Bippo](http://www.bippo.co.id/) & [Soluvas](http://www.soluvas.com/) and get deployed into the Sonatype repository: https://oss.sonatype.org/content/groups/public/ You can use the search UI from https://oss.sonatype.org/
 
-Magja is build using Apache Maven. Please run:
-     
-    mvn clean package 
-    
-to build the software. There is a Maven profile included, running the entire integration-test suite against a Magento Shop. Please make sure to place your `magento-api.properties` file in `src/test/resources` and run the following command to execute the integration tests:
 
-    mvn clean install -P itest
-    
-
-## References and History
-
-Magja has been developed on Google Code, so old resources are still available at:
-
-* Magja: http://code.google.com/p/magja/
-* Installation for Use: http://code.google.com/p/magja/wiki/Installation
-* Setup Project for Development: http://code.google.com/p/magja/wiki/SetupProject
-* Wiki Pages: http://code.google.com/p/magja/w/list 
-
-## Acknowledgments
-
-Bandung Everlasting Beauty logo downloaded from Info Bandung (http://infobandung.codeplex.com/) CodePlex project designed by Achmad Sutarjono.
