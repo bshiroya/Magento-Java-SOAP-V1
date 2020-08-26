@@ -95,7 +95,7 @@ public class SoapReturnParser {
     case StringType:
       return value.getText();
     case IntegerType:
-      return Integer.parseInt(value.getText());
+      return Long.parseLong(value.getText());
     case FloatType:
       return Double.parseDouble(value.getText());
     case BooleanType:
